@@ -9,6 +9,8 @@ const enemy_img = document.getElementById("enemy-img");
 const player_speed = 5;
 const enemy_speed = 8;
 
+let gameStart = false;
+
 // Characterproperties
 const player = {
     x: 50,
@@ -50,6 +52,8 @@ const update = () => {
         return;
     }
 
+    gameStart = true;
+
     ctx.clearRect(0,0,canvas.width, canvas.height);
 
     // Rendering
@@ -73,6 +77,7 @@ const update = () => {
         player.y < enemy.y + enemy.height &&
         player.y + player.height > enemy.y
     ) {
+        gameStart = false;
         gameOver = true;
         document.getElementById("jump-game-score").innerText = score;
         document.getElementById("Gameover").style.display = "flex";
@@ -105,6 +110,19 @@ const startGame = () => {
 
 document.addEventListener('keydown', (event) => {
     if(event.keyCode === 32) {
+        if(player.y < canvas.height-50) {
+            return;
+        } else {
+            player.jumping = true;
+        }
+        setTimeout(() => {
+            player.jumping = false;
+        }, 200);
+    }
+})
+
+document.addEventListener('click', () => {
+    if(gameStart) {
         if(player.y < canvas.height-50) {
             return;
         } else {
