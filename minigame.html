@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roy - Minigame</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="minigame.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2b1c6b1e57.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="sub-header">
+        <div class="sub-text-container">
+            <h3 class="main-title">Roy's Minigames</h3>
+        </div>
+        <div class="top-header">
+            <a href="index.html" class="logo-container">
+                <img src="images/logo.png" alt="logo">
+            </a>
+            <div class="mobile-btn"><i class="fa-solid fa-bars"></i></div>
+            <nav class="navigation">
+                <ul class="menu">
+                <a class="menu-list" href="index.html#info-section">Information</a>
+                <a class="menu-list" href="#">Mini Game</a>
+                <a class="menu-list" href="index.html#bookmark-section">Book-Marks</a>
+                </ul>
+            </nav>
+        </div>
+    </header class="main-header">
+    <div class="minigame-section-wrap">
+        <section class="minigame-section">
+            <div  id="minigame-section" style="display: block; position: absolute; top:-80px; z-index: -1;"></div>
+            <div class="section-inner-container">
+            <div class="title">
+                <h4> Memory Game </h4>
+            </div>
+            <div class="game-container">
+                <div class="stage1">
+                    <div class="game-title">
+                        Memory Card Game
+                    </div>
+                    <div class="game-play-btn button">
+                        <span>
+                            PLAY
+                        </span>
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="stage2">
+                    <div class="card-wrap">
+                        <div class="card-container">
+                            <div class="card card-1">0</div>
+                        </div>
+                        <div class="card-container">
+                            <div class="card card-2">1</div>
+                        </div>
+                        <div class="card-container">
+                            <div class="card card-3">2</div>
+                        </div>
+                        <div class="card-container">
+                            <div class="card card-4">3</div>
+                        </div>
+                        <div class="card-container">
+                            <div class="card card-5">4</div>
+                        </div>
+                        <div class="card-container">
+                            <div class="card card-6">5</div>
+                        </div>
+                        <div class="card-container">
+                            <div class="card card-7">6</div>
+                        </div>
+                        <div class="card-container">
+                            <div class="card card-8">7</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage3">
+                    <div class="stage-wrap">
+                        <div class="game-result-score">
+                            CONGRATULATION!
+                        </div>
+                        <div class="game-result-over">
+                            GAME CLEAR!
+                        </div>
+                        <div class="game-btn-wrap">
+                            <div class="replay-btn button">
+                                <span>REPLAY</span>
+                                <i class="fa-solid fa-rotate-right"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="minigame-section">
+            <div class="section-inner-container">
+                <div class="title">
+                    <h4> Jump Game </h4>
+                </div>
+                <div class="game-container">
+                    <div class="jump-game-stage">
+                        <div class = "jump-game-wrap">
+                            <p>JUMP GAME</p>
+                            <div id = "jump-start-btn" class = "button">  
+                                <span>
+                                    PLAY
+                                </span>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <canvas id="gameCanvas" width="600" height="200"></canvas>
+                            <div id="jump-score">
+                                Score: 0
+                            </div>
+                            <div id="Gameover">
+                                <div class = "jump-game-wrap">
+                                    <p>GAME OVER</p>
+                                    <p>SCORE: <span id = jump-game-score></span></p>
+                                    <div id = "jump-restart-btn" class = "button">  
+                                        <span>
+                                            REPLAY
+                                        </span>
+                                        <i class="fa-solid fa-rotate-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div style="display: none">
+                <img id = "player-img" width = "40px" height="40px" src="images\dinosaur-game-seeklogo.com.svg">
+                <img id = "enemy-img" width = "20px" height="20px" src="images/pngwing.com (2).png">
+            </div>
+
+        </section>
+    </div>
+    <footer class="main-footer">
+        <div class="sns-container">
+            <a target="_blank" href="https://www.instagram.com/">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a target="_blank" href="mailto:royjeong99@gmail.com">
+                <i class="fa-regular fa-envelope"></i>
+            </a>
+        </div>
+        <a href="index.html" class="logo-container">
+            <img src="images/logo.png" alt="logo">
+        </a>
+    </footer>
+
+    <a href="#" class="top-btn">
+        <i class="fa-solid fa-sort-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script src="minigame.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+.sub-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 300px;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/Maltipoo-Feature.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sub-text-container{
+    color: aliceblue;
+    text-shadow: 2px 2px 4px #000;
+    padding: 150px 15px 0;
+}
+
+.jump-game-stage {
+    position: relative;
+}
+
+#jump-score {
+    position: absolute;
+    top: 10px;
+    right: 50%;
+    transform: translateX(+50%);
+    font-family: 'Roboto';
+}
+
+canvas {
+    background-color: white;
+    display: block;
+    margin: 0 auto;
+}
+
+.jump-game-wrap, #Gameover {
+    width: 200px;
+    height: 100px;
+    background-color: grey;
+    border: 3px solid blue;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto';
+    opacity: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#Gameover {
+    display: none;
+}
+
+#jump-start-btn, #jump-restart-btn {
+    padding: 5px 20px;
+    background-color: white;
+    border-radius: 15px;
+    border: solid 1px black;
+}
